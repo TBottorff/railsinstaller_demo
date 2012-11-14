@@ -5,7 +5,12 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#commented out next statement
+#gem 'sqlite3'
+#added next statement due to
+#  blog.dominicsayers.com/2011/01/21/ ...
+#  howto-install-ruby-on-rails-on-windows-and-deploy-to-heroku
+group :development, :test do gem 'sqlite3-ruby', :require => 'sqlite3' end
 
 
 # Gems used only for assets and not required
