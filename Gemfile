@@ -12,8 +12,10 @@ gem 'rails', '3.2.8'
 #  howto-install-ruby-on-rails-on-windows-and-deploy-to-heroku
 group :development, :test do gem 'sqlite3-ruby', :require => 'sqlite3' end
 # trying to satisfy heroku's db 
-gem "pg", :group => :production
-
+#gem "pg", :group => :production
+group :production do
+  gem 'pg'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
