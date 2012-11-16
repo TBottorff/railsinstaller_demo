@@ -1,4 +1,6 @@
 RailsinstallerDemo::Application.routes.draw do
+  resources :minimessages
+
   resources :users
 
   get "welcome/index"

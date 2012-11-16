@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Actualmessage:</b>
+  <%= @minimessage.actualMessage %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @minimessage.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_minimessage_path(@minimessage) %> |
+<%= link_to 'Back', minimessages_path %>

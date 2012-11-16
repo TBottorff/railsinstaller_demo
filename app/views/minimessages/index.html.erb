@@ -1,0 +1,25 @@
+<h1>Listing minimessages</h1>
+
+<table>
+  <tr>
+    <th>Actualmessage</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @minimessages.each do |minimessage| %>
+  <tr>
+    <td><%= minimessage.actualMessage %></td>
+    <td><%= minimessage.user_id %></td>
+    <td><%= link_to 'Show', minimessage %></td>
+    <td><%= link_to 'Edit', edit_minimessage_path(minimessage) %></td>
+    <td><%= link_to 'Destroy', minimessage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Minimessage', new_minimessage_path %>

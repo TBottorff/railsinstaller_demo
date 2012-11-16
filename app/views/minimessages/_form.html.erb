@@ -1,0 +1,25 @@
+<%= form_for(@minimessage) do |f| %>
+  <% if @minimessage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@minimessage.errors.count, "error") %> prohibited this minimessage from being saved:</h2>
+
+      <ul>
+      <% @minimessage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :actualMessage %><br />
+    <%= f.text_field :actualMessage %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
