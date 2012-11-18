@@ -10,7 +10,15 @@ gem 'rails', '3.2.8'
 #added next statement due to
 #  blog.dominicsayers.com/2011/01/21/ ...
 #  howto-install-ruby-on-rails-on-windows-and-deploy-to-heroku
-group :development, :test do gem 'sqlite3-ruby', :require => 'sqlite3' end
+group :development, :test do 
+	gem 'sqlite3-ruby', :require => 'sqlite3'
+	# added rspec-rails based on http://ruby.railstutorial.org/chapters/static-pages#top
+	gem 'rspec-rails', '2.11.0'
+ end
+# added group:test do based on http://ruby.railstutorial.org/chapters/static-pages#top
+group :test do
+  gem 'capybara', '1.1.2'
+end
 # trying to satisfy heroku's db 
 #gem "pg", :group => :production
 group :production do
