@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsInstallerDemo | <%= yield(:title) %></title>
-  <style type="text/css" media="screen">
+  <%= image_tag("favicon.ico", :size => "16x16") %>
+  <%= favicon_link_tag '/favicon.ico' %>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <title><%= full_title(yield(:title)) %>
+  </title>
+  
+    <style type="text/css" media="screen">
       body {
         margin-bottom: 25px;
         padding: 0;
@@ -10,6 +15,9 @@
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
         color: #333;
+      }
+      title {
+        color: red;
       }
 
       h1 {
