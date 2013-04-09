@@ -1,29 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#commented out next statement
-#gem 'sqlite3'
-#added next statement due to
-#  blog.dominicsayers.com/2011/01/21/ ...
-#  howto-install-ruby-on-rails-on-windows-and-deploy-to-heroku
-group :development, :test do 
-	gem 'sqlite3-ruby', :require => 'sqlite3'
-	# added rspec-rails based on http://ruby.railstutorial.org/chapters/static-pages#top
-	gem 'rspec-rails', '2.11.0'
- end
-# added group:test do based on http://ruby.railstutorial.org/chapters/static-pages#top
-group :test do
-  gem 'capybara', '1.1.2'
-end
-# trying to satisfy heroku's db 
-#gem "pg", :group => :production
-group :production do
-  gem 'pg'
-end
+gem 'sqlite3'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

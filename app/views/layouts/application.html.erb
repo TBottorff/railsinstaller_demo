@@ -1,71 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= image_tag("favicon.ico", :size => "16x16") %>
-  <%= favicon_link_tag '/favicon.ico' %>
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <title><%= full_title(yield(:title)) %>
-  </title>
-  
-    <style type="text/css" media="screen">
-      body {
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-      title {
-        color: red;
-      }
-
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-      #header {
-        background-image: url("assets/Koala.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-
-    </style>
-      
+  <title>RailsinstallerDemo</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
- <%= yield %> 
+<%= yield %>
 
 </body>
 </html>
